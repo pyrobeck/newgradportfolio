@@ -42,7 +42,7 @@ function Reel({ reel }) {
 
   return (
     <article className="reel reveal" style={{ "--c": reel.color }}>
-      <div className="reel__media">
+      <div className="reel__media" style={reel.bg ? { background: reel.bg } : undefined}>
         <video
           ref={ref}
           src={reel.src}
@@ -51,6 +51,7 @@ function Reel({ reel }) {
           loop
           playsInline
           preload="metadata"
+          style={reel.fit ? { objectFit: reel.fit } : undefined}
           aria-label={reel.title}
         />
         {reel.audio && (
