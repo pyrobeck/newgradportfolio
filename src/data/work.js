@@ -138,7 +138,7 @@ export const REELS = [
   { src: spiderReel, poster: spiderReelPoster, title: "Spider-LEGO Breakdown", tools: ["3D", "Animation"], description: "A LEGO-style Spider-Man head, modelled and animated in 3D.", color: "var(--red)" },
   { src: clothSim, poster: clothSimPoster, title: "Curtain Cloth Sim", tools: ["Houdini", "Simulation"], description: "Wind-blown curtain simulation in the kitchen scene.", color: "var(--yellow)" },
   { src: houdiniKitchen, poster: houdiniKitchenPoster, title: "Kitchen Fly-Through", tools: ["Houdini", "Camera"], description: "Lighting and camera pass through the modelled kitchen.", color: "var(--violet)" },
-  { src: firstAnim, poster: firstAnimPoster, title: "First Animation!", tools: ["2D", "Frame-by-frame"], description: "Where it started — my first frame-by-frame animation.", color: "var(--magenta)" },
+  { src: firstAnim, poster: firstAnimPoster, title: "First Animation!", tools: ["2D", "Frame-by-frame"], description: "My first frame-by-frame animation.", color: "var(--magenta)" },
 ];
 
 export const PROJECTS = {
