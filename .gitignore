@@ -25,3 +25,6 @@ dist-ssr
 
 # full-size original artwork (site uses optimised copies in src/assets/web)
 src/assets/artwork/
+
+# local tooling
+.claude/
