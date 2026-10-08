@@ -60,6 +60,8 @@ import houdiniKitchen from "../assets/web/houdini-kitchen.mp4";
 import houdiniKitchenPoster from "../assets/web/houdini-kitchen-poster.webp";
 import firstAnim from "../assets/web/first-animation.mp4";
 import firstAnimPoster from "../assets/web/first-animation-poster.webp";
+import runAnim from "../assets/web/run-animation.mp4";
+import runAnimPoster from "../assets/web/run-animation-poster.webp";
 
 /* Spider-Verse accent per category */
 export const CATEGORY_COLORS = {
