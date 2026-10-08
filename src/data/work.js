@@ -60,8 +60,8 @@ import houdiniKitchen from "../assets/web/houdini-kitchen.mp4";
 import houdiniKitchenPoster from "../assets/web/houdini-kitchen-poster.webp";
 import firstAnim from "../assets/web/first-animation.mp4";
 import firstAnimPoster from "../assets/web/first-animation-poster.webp";
-import runAnim from "../assets/web/run-animation.mp4";
-import runAnimPoster from "../assets/web/run-animation-poster.webp";
+import viEyes from "../assets/web/vi-eyes.mp4";
+import viEyesPoster from "../assets/web/vi-eyes-poster.webp";
 
 /* Spider-Verse accent per category */
 export const CATEGORY_COLORS = {
@@ -141,7 +141,7 @@ export const REELS = [
   { src: clothSim, poster: clothSimPoster, title: "Curtain Cloth Sim", tools: ["Houdini", "Simulation"], description: "Wind-blown curtain simulation in the kitchen scene.", color: "var(--yellow)" },
   { src: houdiniKitchen, poster: houdiniKitchenPoster, title: "Kitchen Fly-Through", tools: ["Houdini", "Camera"], description: "Lighting and camera pass through the modelled kitchen.", color: "var(--violet)" },
   { src: firstAnim, poster: firstAnimPoster, title: "First Animation!", tools: ["2D", "Frame-by-frame"], description: "My first frame-by-frame animation.", color: "var(--magenta)" },
-  { src: runAnim, poster: runAnimPoster, title: "Walk Cycle", tools: ["2D", "Frame-by-frame"], description: "A looping frame-by-frame walk cycle.", color: "var(--cyan)", ratio: "4 / 3" },
+  { src: viEyes, poster: viEyesPoster, title: "Vi Eyes", tools: ["2D", "Animation"], description: "A looping animation of Vi from Arcane.", color: "var(--cyan)", ratio: "4 / 3" },
 ];
 
 export const PROJECTS = {
