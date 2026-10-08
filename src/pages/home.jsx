@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import spider from "../assets/spiderbec.png";
 import electricViolet from "../assets/web/electric-violet.webp";
 import froshFull from "../assets/web/frosh-full-set.webp";
-import spiderReelPoster from "../assets/web/spider-lego-reel-poster.webp";
-import spiderReel from "../assets/web/spider-lego-reel.mp4";
+import runAnim from "../assets/web/run-animation.mp4";
+import runAnimPoster from "../assets/web/run-animation-poster.webp";
 import capstoneBooth from "../assets/web/capstone-booth.webp";
 import spidermanSketch from "../assets/web/spiderman-sketch.webp";
 import { scrollToId } from "../components/navbar";
@@ -37,8 +37,8 @@ const MODES = [
     id: "3d",
     title: "3D & Motion",
     sub: "Blender · Houdini · Unity",
-    cover: spiderReelPoster,
-    video: spiderReel,
+    cover: runAnimPoster,
+    video: runAnim,
     color: "var(--violet)",
     alt: "var(--red)",
     level: 5,
@@ -131,7 +131,6 @@ export default function Home() {
       aria-label="Introduction"
     >
       <div className="hero__bg" aria-hidden="true">
-        <div className="hero__lines" />
         <div className="hero__blob hero__blob--a" />
         <div className="hero__blob hero__blob--b" />
         <img className="hero__web" src={spider} alt="" />
@@ -203,7 +202,11 @@ export default function Home() {
                 style={{ "--c": m.color }}
                 onClick={() => (active ? launch(m) : select(i))}
               >
-                <img src={m.cover} alt="" loading={i > 2 ? "lazy" : "eager"} />
+                {m.video ? (
+                  <video src={m.video} poster={m.cover} autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
+                ) : (
+                  <img src={m.cover} alt="" loading={i > 2 ? "lazy" : "eager"} />
+                )}
                 <span className="tile__num">0{i + 1}</span>
                 <span className="tile__go">PLAY ▸</span>
                 <span className="tile__body">

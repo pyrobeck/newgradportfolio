@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-import Marquee from "./components/Marquee";
 import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
 import ClientWork from "./pages/clientwork";
@@ -42,7 +41,6 @@ export default function App() {
       <Navbar />
       <main>
         <Home />
-        <Marquee />
         <Portfolio />
         <ClientWork />
         <ThreeDWork />

@@ -536,16 +536,6 @@ button {
 }
 
 /* comic speed-lines */
-.hero__lines {
-  position: absolute;
-  inset: -20%;
-  background: repeating-linear-gradient(
-    -62deg,
-    transparent 0 46px,
-    rgba(255, 255, 255, 0.025) 46px 48px
-  );
-}
-
 .hero__web {
   position: absolute;
   right: -6vw;
@@ -801,7 +791,8 @@ button {
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.6), 0 0 34px -2px var(--c), 8px 8px 0 var(--c);
 }
 
-.tile img {
+.tile img,
+.tile video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -811,7 +802,8 @@ button {
   transition: transform 0.6s var(--ease);
 }
 
-.tile.is-active img {
+.tile.is-active img,
+.tile.is-active video {
   transform: skewX(3deg) scale(1.16);
 }
 
