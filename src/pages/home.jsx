@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import spider from "../assets/spiderbec.png";
 import electricViolet from "../assets/web/electric-violet.webp";
 import froshFull from "../assets/web/frosh-full-set.webp";
-import runAnim from "../assets/web/run-animation.mp4";
-import runAnimPoster from "../assets/web/run-animation-poster.webp";
+import viEyes from "../assets/web/vi-eyes.mp4";
+import viEyesPoster from "../assets/web/vi-eyes-poster.webp";
 import capstoneBooth from "../assets/web/capstone-booth.webp";
 import spidermanSketch from "../assets/web/spiderman-sketch.webp";
 import { scrollToId } from "../components/navbar";
@@ -37,8 +37,8 @@ const MODES = [
     id: "3d",
     title: "3D & Motion",
     sub: "Blender · Houdini · Unity",
-    cover: runAnimPoster,
-    video: runAnim,
+    cover: viEyesPoster,
+    video: viEyes,
     color: "var(--violet)",
     alt: "var(--red)",
     level: 5,
