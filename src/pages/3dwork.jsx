@@ -1,4 +1,5 @@
 import { Component, Suspense, lazy, useEffect, useRef, useState } from "react";
+import Lightbox from "../components/Lightbox";
 import { REELS } from "../data/work";
 import { Play, SoundOff, SoundOn, WitchHouseIcon } from "../components/icons";
 
@@ -21,7 +22,7 @@ class ViewerBoundary extends Component {
 }
 
 /** Plays when on screen, pauses when off — saves battery on phones. */
-function Reel({ reel }) {
+function Reel({ reel, onOpen }) {
   const ref = useRef(null);
   const [muted, setMuted] = useState(true);
 
@@ -53,6 +54,7 @@ function Reel({ reel }) {
           preload="metadata"
           aria-label={reel.title}
         />
+        <button className="reel__open" onClick={onOpen} aria-label={`${reel.title}, open full size`} />
         {reel.audio && (
           <button
             className="reel__sound"
@@ -80,6 +82,8 @@ function Reel({ reel }) {
 
 export default function ThreeDWork() {
   const [entered, setEntered] = useState(false);
+  const [viewer, setViewer] = useState(null); // index into REELS
+  const reelItems = REELS.map((r) => ({ src: r.src, poster: r.poster, title: r.title, description: r.description, video: true }));
 
   return (
     <section id="3d" className="section three" style={{ "--accent": "var(--violet)" }}>
@@ -149,15 +153,25 @@ export default function ThreeDWork() {
 
         <div className="reels">
           {REELS.filter((r) => !r.small).map((r) => (
-            <Reel key={r.title} reel={r} />
+            <Reel key={r.title} reel={r} onOpen={() => setViewer(REELS.indexOf(r))} />
           ))}
         </div>
         <div className="reels reels--small">
           {REELS.filter((r) => r.small).map((r) => (
-            <Reel key={r.title} reel={r} />
+            <Reel key={r.title} reel={r} onOpen={() => setViewer(REELS.indexOf(r))} />
           ))}
         </div>
       </div>
+
+      {viewer !== null && (
+        <Lightbox
+          items={reelItems}
+          index={viewer}
+          label="Reels"
+          setIndex={(fn) => setViewer((i) => (typeof fn === "function" ? fn(i) : fn))}
+          onClose={() => setViewer(null)}
+        />
+      )}
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { ArrowLeft, ArrowRight, Close } from "./icons";
 
-/** Fullscreen viewer: arrows / swipe / Esc. `items` = [{src,title,description}] */
+/** Fullscreen viewer: arrows / swipe / Esc. `items` = [{src,title,description,video?,poster?}] */
 export default function Lightbox({ items, index, setIndex, onClose, label }) {
   const closeRef = useRef(null);
   const touch = useRef(null);
@@ -36,6 +36,7 @@ export default function Lightbox({ items, index, setIndex, onClose, label }) {
   useEffect(() => {
     if (n < 2) return;
     [items[(index + 1) % n], items[(index - 1 + n) % n]].forEach((it) => {
+      if (it.video) return;
       const im = new Image();
       im.src = it.src;
     });
@@ -67,13 +68,27 @@ export default function Lightbox({ items, index, setIndex, onClose, label }) {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
-        <img key={item.src} src={item.src} alt={item.title} />
+        {item.video ? (
+          <video
+            key={item.src}
+            src={item.src}
+            poster={item.poster}
+            autoPlay
+            loop
+            muted
+            controls
+            playsInline
+            aria-label={item.title}
+          />
+        ) : (
+          <img key={item.src} src={item.src} alt={item.title} />
+        )}
         {n > 1 && (
           <>
-            <button className="lightbox__nav lightbox__nav--prev" onClick={prev} aria-label="Previous image">
+            <button className="lightbox__nav lightbox__nav--prev" onClick={prev} aria-label="Previous">
               <ArrowLeft />
             </button>
-            <button className="lightbox__nav lightbox__nav--next" onClick={next} aria-label="Next image">
+            <button className="lightbox__nav lightbox__nav--next" onClick={next} aria-label="Next">
               <ArrowRight />
             </button>
           </>

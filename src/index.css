@@ -1188,13 +1188,20 @@ button {
   touch-action: pan-y;
 }
 
-.lightbox__stage img {
+.lightbox__stage img,
+.lightbox__stage video {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
   animation: featureIn 0.4s var(--ease);
+}
+
+.lightbox__stage video {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
 
 .lightbox__nav {
@@ -1550,6 +1557,22 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.reel__open {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.reel__open:focus-visible {
+  outline: 2px solid var(--c);
+  outline-offset: -4px;
 }
 
 .reel__sound {
