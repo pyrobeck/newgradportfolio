@@ -41,7 +41,7 @@ function Reel({ reel }) {
   }, []);
 
   return (
-    <article className="reel reveal" style={{ "--c": reel.color }}>
+    <article className={`reel reveal${reel.small ? " reel--small" : ""}`} style={{ "--c": reel.color }}>
       <div className="reel__media" style={reel.ratio ? { aspectRatio: reel.ratio } : undefined}>
         <video
           ref={ref}
@@ -148,7 +148,12 @@ export default function ThreeDWork() {
         </div>
 
         <div className="reels">
-          {REELS.map((r) => (
+          {REELS.filter((r) => !r.small).map((r) => (
+            <Reel key={r.title} reel={r} />
+          ))}
+        </div>
+        <div className="reels reels--small">
+          {REELS.filter((r) => r.small).map((r) => (
             <Reel key={r.title} reel={r} />
           ))}
         </div>

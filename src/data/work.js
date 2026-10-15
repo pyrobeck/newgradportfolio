@@ -58,10 +58,14 @@ import clothSim from "../assets/web/cloth-sim-curtains.mp4";
 import clothSimPoster from "../assets/web/cloth-sim-curtains-poster.webp";
 import houdiniKitchen from "../assets/web/houdini-kitchen.mp4";
 import houdiniKitchenPoster from "../assets/web/houdini-kitchen-poster.webp";
-import firstAnim from "../assets/web/first-animation.mp4";
-import firstAnimPoster from "../assets/web/first-animation-poster.webp";
+import gwen from "../assets/web/gwen.mp4";
+import gwenPoster from "../assets/web/gwen-poster.webp";
 import viEyes from "../assets/web/vi-eyes.mp4";
 import viEyesPoster from "../assets/web/vi-eyes-poster.webp";
+import beeRunning from "../assets/web/bee-running.mp4";
+import beeRunningPoster from "../assets/web/bee-running-poster.webp";
+import runCycle from "../assets/web/run-cycle.mp4";
+import runCyclePoster from "../assets/web/run-cycle-poster.webp";
 
 /* Spider-Verse accent per category */
 export const CATEGORY_COLORS = {
@@ -140,8 +144,10 @@ export const REELS = [
   { src: spiderReel, poster: spiderReelPoster, title: "Spider-LEGO Breakdown", tools: ["3D", "Animation"], description: "A LEGO-style Spider-Man head, modelled and animated in 3D.", color: "var(--red)" },
   { src: clothSim, poster: clothSimPoster, title: "Curtain Cloth Sim", tools: ["Houdini", "Simulation"], description: "Wind-blown curtain simulation in the kitchen scene.", color: "var(--yellow)" },
   { src: houdiniKitchen, poster: houdiniKitchenPoster, title: "Kitchen Fly-Through", tools: ["Houdini", "Camera"], description: "Lighting and camera pass through the modelled kitchen.", color: "var(--violet)" },
-  { src: firstAnim, poster: firstAnimPoster, title: "First Animation!", tools: ["2D", "Frame-by-frame"], description: "My first frame-by-frame animation.", color: "var(--magenta)" },
+  { src: gwen, poster: gwenPoster, title: "Gwen", tools: ["2D", "Frame-by-frame"], description: "A looping frame-by-frame character animation.", color: "var(--magenta)", ratio: "4 / 3" },
   { src: viEyes, poster: viEyesPoster, title: "Vi Eyes", tools: ["2D", "Animation"], description: "A looping animation of Vi from Arcane.", color: "var(--cyan)", ratio: "4 / 3" },
+  { src: beeRunning, poster: beeRunningPoster, title: "Bee Running", tools: ["2D", "Frame-by-frame"], description: "A frame-by-frame run through a field.", color: "var(--cyan)", small: true },
+  { src: runCycle, poster: runCyclePoster, title: "Run Cycle", tools: ["2D", "Frame-by-frame"], description: "A looping frame-by-frame run cycle.", color: "var(--yellow)", ratio: "4 / 3", small: true },
 ];
 
 export const PROJECTS = {

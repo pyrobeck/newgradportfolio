@@ -1517,6 +1517,29 @@ button {
   box-shadow: 0 0 0 1px var(--c), 0 20px 50px -20px var(--c);
 }
 
+.reels--small {
+  margin-top: clamp(14px, 2vw, 22px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 280px));
+  align-items: start;
+}
+
+.reels.reels--small > .reel {
+  grid-column: auto;
+}
+
+.reel--small .reel__body {
+  padding: 12px 14px 14px;
+}
+
+.reel--small .reel__title {
+  font-size: 13px;
+}
+
+.reel--small .reel__desc {
+  font-size: 13px;
+  margin: 4px 0 10px;
+}
+
 .reel__media {
   position: relative;
   aspect-ratio: 16 / 9;
