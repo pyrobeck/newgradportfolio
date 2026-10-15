@@ -12,7 +12,7 @@ export default function ClientWork() {
       <div className="wrap">
         <header className="section-head">
           <div className="reveal">
-            <span className="section-num">02 — For Hire</span>
+            <span className="section-num">02 · For Hire</span>
             <h2 className="section-title">
               Made for <em>other people</em>
             </h2>
@@ -30,7 +30,7 @@ export default function ClientWork() {
               className="client reveal"
               style={{ "--c": c.color, "--d": `${i * 100}ms` }}
               onClick={() => setViewer({ items: c.series, index: 0, label: c.org })}
-              aria-label={`${c.org} — open ${c.series.length} pieces`}
+              aria-label={`${c.org}: open ${c.series.length} pieces`}
             >
               <span className="client__img">
                 <img src={c.src} width={c.w} height={c.h} alt="" loading="lazy" decoding="async" />

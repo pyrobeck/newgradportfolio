@@ -53,8 +53,8 @@ export default function Contact() {
 
     // No Formspree ID yet → open the visitor's mail app instead.
     if (!FORMSPREE_ID) {
-      const subject = encodeURIComponent(`[Portfolio] ${values.topic} — ${values.name}`);
-      const body = encodeURIComponent(`${values.message}\n\n— ${values.name} (${values.email})`);
+      const subject = encodeURIComponent(`[Portfolio] ${values.topic} from ${values.name}`);
+      const body = encodeURIComponent(`${values.message}\n\n${values.name} (${values.email})`);
       window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
       setStatus("sent");
       return;
@@ -71,7 +71,7 @@ export default function Contact() {
           email: values.email,
           topic: values.topic,
           message: values.message,
-          _subject: `[Portfolio] ${values.topic} — ${values.name}`,
+          _subject: `[Portfolio] ${values.topic} from ${values.name}`,
         }),
       });
       if (res.ok) {
@@ -91,13 +91,13 @@ export default function Contact() {
     <section id="contact" className="section contact" style={{ "--accent": "var(--yellow)" }}>
       <div className="wrap contact__grid">
         <div className="reveal">
-          <span className="section-num">05 — Contact</span>
+          <span className="section-num">05 · Contact</span>
           <h2 className="contact__big glitch">
             Let’s make
             <em>something.</em>
           </h2>
           <p className="section-lede" style={{ marginTop: 22 }}>
-            Commissions, design work, 3D, games or a role on your team — I’d love to hear about it.
+            Commissions, design work, 3D, games or a role on your team. I’d love to hear about it.
           </p>
           <ul className="links">
             {LINKS.map((l) => (
@@ -126,7 +126,7 @@ export default function Contact() {
                 <h3>Message {FORMSPREE_ID ? "sent" : "ready"}</h3>
                 <p>
                   {FORMSPREE_ID
-                    ? "Thanks for reaching out — I’ll get back to you soon."
+                    ? "Thanks for reaching out. I’ll get back to you soon."
                     : "Your email app should have opened with the message filled in. Just hit send!"}
                 </p>
                 <button className="btn btn--ghost" onClick={() => setStatus("idle")}>

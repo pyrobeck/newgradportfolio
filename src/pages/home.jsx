@@ -20,7 +20,7 @@ const MODES = [
     alt: "var(--cyan)",
     level: 4,
     burst: "13 works",
-    blurb: "Digital portraits, fan art and traditional pieces — from Arcane studies to an art-battle painting.",
+    blurb: "Digital portraits, fan art and traditional pieces, from Arcane studies to an art-battle painting.",
   },
   {
     id: "client",
@@ -31,7 +31,7 @@ const MODES = [
     alt: "var(--magenta)",
     level: 3,
     burst: "1,300+ shirts",
-    blurb: "Work made for other people — identity and print for IEEE Carleton, EngFrosh 2023 and the C-ENG musicals.",
+    blurb: "Work made for other people: identity and print for IEEE Carleton, EngFrosh 2023 and the C-ENG musicals.",
   },
   {
     id: "3d",
@@ -65,7 +65,7 @@ const MODES = [
     alt: "var(--yellow)",
     level: 1,
     burst: "Hi!",
-    blurb: "Got a project, a commission or a role in mind? Send a message — it lands straight in my inbox.",
+    blurb: "Got a project, a commission or a role in mind? Send a message. It lands straight in my inbox.",
   },
 ];
 
@@ -147,7 +147,7 @@ export default function Home() {
             draws, codes &amp; builds <b>worlds</b> you can step into.
           </p>
           <p className="hero__intro">
-            Illustrator and 3D artist with a technology background at Carleton University —
+            Illustrator and 3D artist with a technology background at Carleton University.
             I make art, then make it interactive. Pick a mode to start.
           </p>
           <div className="hero__actions">

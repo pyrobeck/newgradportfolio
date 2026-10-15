@@ -81,17 +81,17 @@ export const FILTERS = [
 ];
 
 const musical = [
-  { src: beamPlaybill, w: 1200, h: 1800, title: "Beam Girls — Playbill Cover", description: "Official playbill cover for the C-ENG musical Beam Girls, a parody of Mean Girls." },
-  { src: atomsPlaybill, w: 1358, h: 1800, title: "The Atoms Family — Playbill Cover", description: "Official playbill cover for The Atoms Family, a parody of The Addams Family." },
-  { src: beamPoster, w: 1391, h: 1800, title: "Beam Girls — Ticket Poster", description: "Poster advertising ticket sales for the musical." },
-  { src: atomsPoster, w: 1391, h: 1800, title: "Atoms Family — Ticket Poster", description: "Poster advertising ticket sales for the musical." },
-  { src: atomsTicket, w: 1004, h: 590, title: "Atoms Family — Ticket", description: "Show ticket designed for the musical." },
+  { src: beamPlaybill, w: 1200, h: 1800, title: "Beam Girls: Playbill Cover", description: "Official playbill cover for the C-ENG musical Beam Girls, a parody of Mean Girls." },
+  { src: atomsPlaybill, w: 1358, h: 1800, title: "The Atoms Family: Playbill Cover", description: "Official playbill cover for The Atoms Family, a parody of The Addams Family." },
+  { src: beamPoster, w: 1391, h: 1800, title: "Beam Girls: Ticket Poster", description: "Poster advertising ticket sales for the musical." },
+  { src: atomsPoster, w: 1391, h: 1800, title: "Atoms Family: Ticket Poster", description: "Poster advertising ticket sales for the musical." },
+  { src: atomsTicket, w: 1004, h: 590, title: "Atoms Family: Ticket", description: "Show ticket designed for the musical." },
   { src: costumeHiring, w: 1080, h: 1080, title: "Costume Team Hiring Post", description: "One of the social media graphics made for the musical." },
 ];
 
 const frosh = [
-  { src: froshFull, w: 1110, h: 1200, title: "Escape the Simulation — Full Logo Set", description: "Main EngFrosh 2023 logo with all ten team logos and name bar." },
-  { src: froshLogo, w: 1142, h: 1200, title: "Escape the Simulation — Main Logo", description: "Main EngFrosh logo in colour for dark backgrounds." },
+  { src: froshFull, w: 1110, h: 1200, title: "Escape the Simulation: Full Logo Set", description: "Main EngFrosh 2023 logo with all ten team logos and name bar." },
+  { src: froshLogo, w: 1142, h: 1200, title: "Escape the Simulation: Main Logo", description: "Main EngFrosh logo in colour for dark backgrounds." },
   { src: cGulls, w: 1172, h: 1200, title: "C-Gulls", description: "EngFrosh 2023 team logo." },
   { src: cyberSurfers, w: 1173, h: 1200, title: "Cyber Surfers", description: "EngFrosh 2023 team logo." },
   { src: dataMiners, w: 1180, h: 1200, title: "Data Miners", description: "EngFrosh 2023 team logo." },
@@ -109,13 +109,13 @@ const ieee = [
   { src: ieeeHiring, w: 1080, h: 1350, title: "Director Hiring Post", description: "Graphic advertising director positions for IEEE Carleton & WIE." },
   { src: ieeeBilliards, w: 1080, h: 1350, title: "I Triple Billiards Night", description: "Promotional poster for an IEEE Carleton billiards night." },
   { src: ieeeVariant, w: 1200, h: 960, title: "IEEE Patch Variant", description: "No-name variant of the patch design." },
-  { src: ieeeSlam, w: 1080, h: 1350, title: "SLAM Sign-Ups", description: "Sign-up graphic for SLAM — Stay Late And Make." },
+  { src: ieeeSlam, w: 1080, h: 1350, title: "SLAM Sign-Ups", description: "Sign-up graphic for SLAM (Stay Late And Make)." },
 ];
 
 /* Work made for other people. Each entry opens its own set in the lightbox. */
 export const CLIENTS = [
   { org: "IEEE Carleton", kind: "Student society", title: "Patches, posters & social graphics", description: "Patch concepts, event posters and hiring graphics for IEEE Carleton and WIE.", series: ieee, src: ieeePatch, w: 1200, h: 1200, color: "var(--cyan)", stat: "Patches · Posters" },
-  { org: "EngFrosh 2023", kind: "Orientation week", title: "Escape the Simulation — full identity", description: "Main logo plus ten team logos, printed on shirts and merch for 1,300+ participants.", series: frosh, src: froshFull, w: 1110, h: 1200, color: "var(--yellow)", stat: "1,300+ shirts" },
+  { org: "EngFrosh 2023", kind: "Orientation week", title: "Escape the Simulation: full identity", description: "Main logo plus ten team logos, printed on shirts and merch for 1,300+ participants.", series: frosh, src: froshFull, w: 1110, h: 1200, color: "var(--yellow)", stat: "1,300+ shirts" },
   { org: "C-ENG Musicals", kind: "Theatre", title: "Playbills, posters & tickets", description: "Playbill covers, ticket posters, tickets and social graphics for Beam Girls and The Atoms Family.", series: musical, src: beamPlaybill, w: 1200, h: 1800, color: "var(--magenta)", stat: "2 shows" },
 ];
 

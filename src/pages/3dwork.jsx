@@ -86,13 +86,13 @@ export default function ThreeDWork() {
       <div className="wrap">
         <header className="section-head">
           <div className="reveal">
-            <span className="section-num">03 — 3D &amp; Motion</span>
+            <span className="section-num">03 · 3D &amp; Motion</span>
             <h2 className="section-title">
               Worlds <em>in the round</em>
             </h2>
           </div>
           <p className="section-lede reveal" style={{ "--d": "120ms" }}>
-            Modelled, lit and simulated — then shipped to the browser. Orbit the witch house below,
+            Modelled, lit and simulated, then shipped to the browser. Orbit the witch house below,
             or watch the reels.
           </p>
         </header>

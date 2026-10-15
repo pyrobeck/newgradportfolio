@@ -35,7 +35,7 @@ export default function Portfolio() {
       <div className="wrap">
         <header className="section-head">
           <div className="reveal">
-            <span className="section-num">01 — Gallery</span>
+            <span className="section-num">01 · Gallery</span>
             <h2 className="section-title">
               Ink, paint <em>&amp; pixels</em>
             </h2>
@@ -68,7 +68,7 @@ export default function Portfolio() {
                 className="card"
                 style={{ "--c": CATEGORY_COLORS[main] }}
                 onClick={() => open(g)}
-                aria-label={`${g.title}${g.series ? `, series of ${g.count}` : ""} — open`}
+                aria-label={`${g.title}${g.series ? `, series of ${g.count}` : ""}, open`}
               >
                 <img src={g.src} width={g.w} height={g.h} alt={g.title} loading="lazy" decoding="async" />
                 {g.series && <span className="card__stack">{g.count} pieces</span>}

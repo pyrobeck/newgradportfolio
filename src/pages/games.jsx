@@ -20,7 +20,7 @@ export default function Games() {
       <div className="wrap">
         <header className="section-head">
           <div className="reveal">
-            <span className="section-num">04 — Code &amp; Play</span>
+            <span className="section-num">04 · Code &amp; Play</span>
             <h2 className="section-title">
               Art that <em>runs</em>
             </h2>
@@ -41,7 +41,7 @@ export default function Games() {
                 <h3>Deck of Secrets</h3>
                 <p>
                   An escape-room game for VR, built over eight months with five other students as Code
-                  Noir Studios — from first prototype to a public showcase booth.
+                  Noir Studios, from first prototype to a public showcase booth.
                 </p>
                 <div className="stat">
                   <div><b>8</b><span>months</span></div>
@@ -69,7 +69,7 @@ export default function Games() {
           <article className="panel bento__side reveal" style={{ "--c": "var(--yellow)", "--d": "80ms" }}>
             <span className="panel__eyebrow">Latest · VR game</span>
             <h3>Rodney’s Revenge</h3>
-            <p>My most recent VR game — playable now on itch.io.</p>
+            <p>My most recent VR game, playable now on itch.io.</p>
             <a
               className="panel__link"
               href="https://pyrobeck.itch.io/rodneys-revenge"

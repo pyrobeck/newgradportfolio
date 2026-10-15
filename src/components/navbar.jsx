@@ -65,7 +65,7 @@ export default function Navbar() {
     <>
       <header className={`nav ${scrolled || open ? "is-scrolled" : ""}`}>
         <div className="wrap nav__inner">
-          <a href="#top" className="brand" onClick={go("top")} aria-label="Beck Braun — back to top">
+          <a href="#top" className="brand" onClick={go("top")} aria-label="Beck Braun, back to top">
             <img src={spider} alt="" />
             <span>BECK</span>
           </a>
