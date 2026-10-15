@@ -156,6 +156,7 @@ export default function ThreeDWork() {
             <Reel key={r.title} reel={r} onOpen={() => setViewer(REELS.indexOf(r))} />
           ))}
         </div>
+        <h3 className="reels__label">Studies of Movement</h3>
         <div className="reels reels--small">
           {REELS.filter((r) => r.small).map((r) => (
             <Reel key={r.title} reel={r} onOpen={() => setViewer(REELS.indexOf(r))} />
