@@ -60,7 +60,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--bg);
+  background: var(--bg-2);
   color: var(--text);
   font-family: var(--font-body);
   font-size: 17px;
@@ -223,6 +223,27 @@ button {
 .section {
   position: relative;
   padding: clamp(80px, 12vw, 150px) 0;
+}
+
+/* Each section gets a soft glow of its own accent colour at the left and right
+   edges, like the hero. The glow fades in and out over the section padding and neighbouring sections overlap, so there is no
+   visible seam between them (and it never sits above any content). */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(34% 30% at 100% 16%, color-mix(in srgb, var(--accent) 32%, transparent), transparent),
+    radial-gradient(30% 28% at 0% 86%, color-mix(in srgb, var(--accent) 22%, transparent), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 80px, #000 calc(100% - 80px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 80px, #000 calc(100% - 80px), transparent);
+}
+
+.hero + .section,
+.section + .section {
+  margin-top: -80px;
 }
 
 .section-head {
@@ -496,6 +517,8 @@ button {
   z-index: -1;
   overflow: hidden;
   background: radial-gradient(120% 80% at 50% 120%, var(--bg-2), var(--bg) 70%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 140px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 140px), transparent);
 }
 
 .hero__blob {
@@ -1268,10 +1291,6 @@ button {
 /* ==========================================================================
    3D & MOTION
    ========================================================================== */
-
-.three {
-  background: linear-gradient(180deg, var(--bg), #0b0816 30%, var(--bg));
-}
 
 .stage {
   position: relative;
